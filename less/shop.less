@@ -1,0 +1,70 @@
+.woocommerce {
+  .woocommerce-ordering select {
+    padding: 0.5rem 0.75rem;
+  }
+
+  ul.products li.product .price {
+    color: @font-color;
+    font-weight: 700;
+  }
+
+  a.button,
+  .wc-proceed-to-checkout a.checkout-button,
+  button.button.alt {
+    &:extend(.btn);
+
+    &:hover {
+      &:extend(.btn:hover);
+    }
+  }
+
+  div.product p.price {
+    color: @accent-color;
+    font-size: 1.3rem;
+  }
+
+  .quantity .qty {
+    margin-right: 0.375rem;
+    padding: 0.618em 0;
+  }
+
+  .product_meta {
+    a {
+      &:extend(.u-link);
+    }
+  }
+
+  .added_to_cart {
+    margin-left: 0.75rem;
+  }
+
+  .cart-collaterals .cart_totals {
+    width: 35%;
+  }
+
+  ul.products li.product .added_to_cart,
+  .woocommerce-cart-form__cart-item .product-name a {
+    &:extend(.u-link);
+  }
+
+  table.cart {
+    td.actions .coupon {
+      display: flex;
+
+      .input-text {
+        margin-right: 0.375rem;
+      }
+    }
+  }
+
+  .form-row input.input-text,
+  .form-row textarea {
+    padding: 0.5rem;
+  }
+
+  .checkout {
+    h3 {
+      &:extend(h2);
+    }
+  }
+}

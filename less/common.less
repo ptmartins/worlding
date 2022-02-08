@@ -1,0 +1,37 @@
+.btn {
+    background-color: @font-color;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        background-color: @font-color;
+        color: @accent-color;
+    }
+}
+
+.u-link {
+    color: @font-color;
+    cursor: pointer;
+    -webkit-text-decoration: dotted;
+    text-decoration: dotted;
+    text-underline-offset: 3px;
+    transition: @default-transition;
+
+    &:hover {
+        color: @accent-color;
+    }
+}
+
+.u-link--content {
+    &:extend(.u-link);
+
+    -webkit-text-decoration-line: inherit;
+
+    text-decoration-line: inherit;
+    text-underline-offset: 3px;
+}
+
+.u-input {
+    border: 2px solid @font-color;
+    padding: 0.75rem;
+}

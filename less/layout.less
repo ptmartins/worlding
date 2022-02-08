@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: @bg-color;
+    color: @font-color;
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+// Header
+.header {
+    .inner-wrapper {
+        display: flex;
+        padding: 1.5rem 3rem;
+        margin: 0 auto;
+        max-width: 1440px;
+        width: 100%;
+    }
+}
+
+.logoIcon,
+.logoWord {
+    img {
+        height: 100px;
+    }
+}
+
+.logoWord {
+    margin-left: auto;
+}
+
+.burgerMenu {
+    align-self: center;
+    cursor: pointer;
+    height: 50px;
+    margin-left: 3rem;
+    position: relative;
+    width: 50px;
+    z-index: 100;
+
+    &.active {
+        .burger {
+            visibility: hidden;
+
+            &::before,
+            &::after {
+                background-color: @font-color;
+                top: 0;
+                visibility: visible;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(135deg);
+            }
+        }
+    }
+}
+
+.burger {
+    .absolute-center();
+    background-color: @accent-color;
+    height: 2px;
+    opacity: 1;
+    width: 100%;
+
+    &::before,
+    &::after {
+        background-color: @accent-color;
+        content: "";
+        height: 2px;
+        position: absolute;
+        transition: @default-transition;
+        width: 100%;
+    }
+
+    &::before {
+        top: -20px;
+    }
+
+    &::after {
+        top: 20px;
+    }
+}
+
+// Navigation
+.mainMenu {
+    background-color: @accent-color-faded;
+    height: 100%;
+    padding-top: 9rem;
+    position: fixed;
+    right: -375px;
+    transition: @default-transition;
+    width: 375px;
+    z-index: 99;
+
+    .menu {
+        padding: 0 1.5rem 0 3rem;
+    }
+
+    .menu-item {
+        margin-bottom: 0.75rem;
+
+        a {
+            .u-link();
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .searchform {
+        margin: 4.5rem 3rem 0;
+        padding: 1.5rem 0;
+        position: relative;
+    }
+
+    .search-field {
+        background-color: transparent;
+        color: #000;
+        border: 0;
+        border-bottom: 1px solid #000;
+        padding: 1rem 2rem 1rem 0;
+        width: 100%;
+        
+        &::-webkit-input-placeholder {
+            color: rgba(0, 0, 0, .6);
+        }
+    }
+
+    .search-submit {
+        background-color: transparent;
+        border: 0;
+        color: #000;
+        cursor: pointer;
+        font-size: 1.4rem;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.mainMenu-isActive {
+    .mainMenu {
+        right: 0;
+    }
+}
+
+// Main
+.main {
+    flex-grow: 1;
+}
+
+.main-container {
+    padding: 1.5rem 3rem;
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+}
+
+// Footer
+
+.footer {
+    .inner-wrapper {
+        padding: 1.5rem 3rem 3rem;
+        margin: 6rem auto 0;
+        max-width: 1440px;
+        width: 100%;
+    }
+
+    label {
+        font-size: 0;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .form {
+        display: flex;
+    }
+
+    .u-input {
+        flex-grow: 1;
+        margin-right: 0.75rem;
+
+        &--submit {
+            flex-grow: 0;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.social-networks {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.contact-form {
+    flex-shrink: 0;
+    width: 50%;
+}
+
+.social {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.social-network {
+    margin-left: 1.5rem;
+}
+
+.social-link {
+    font-size: 0;
+
+    &::before {
+        font-size: 2rem;
+    }
+}
+
+.footer-bottom {
+    border-top: 1px solid @dar-color-faded;
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    opacity: 0.7;
+    padding-top: 1.5rem;
+}
+
+.copyright,
+.credits {
+    display: flex;
+    align-items: center;
+
+    .delimiter {
+        margin: 0 0.5rem;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}

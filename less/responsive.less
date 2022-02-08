@@ -1,0 +1,279 @@
+@media all and (max-width: 1200px) {
+  .logoIcon img,
+  .logoWord img {
+    height: 85px;
+  }
+
+  .board-member,
+  .staff-member {
+    height: 320px;
+    width: ~"calc(33.333% - 3rem)";
+    margin: 0 3rem 3rem 0;
+    text-align: center;
+  }
+
+  .sponsor {
+    width: ~"calc(25% - 3rem)";
+  }
+}
+
+@media all and (max-width: 940px) {
+  .archive-item {
+    margin: 0 1.5rem 3rem 0;
+    width: ~"calc(33.333% - 1.5rem)";
+  }
+
+  .woocommerce {
+    .cart-collaterals .cart_totals {
+      width: 48%;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .header {
+    .inner-wrapper {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+  }
+
+  .front-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    .shop,
+    .support-us {
+      width: 100%;
+    }
+
+    .support-us {
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2;
+      margin-bottom: 3rem;
+    }
+
+    .shop {
+      -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+      order: 3;
+    }
+  }
+
+  .logoWord {
+    display: none;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .social {
+    width: 100%;
+  }
+
+  .contact-form {
+    margin-bottom: 3rem;
+
+    .title {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .form {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+  }
+
+  .social {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .credits {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 0.75rem;
+
+    .designedBy {
+      margin-bottom: 0.75rem;
+    }
+
+    .delimiter {
+      display: none;
+    }
+  }
+
+  .copyright {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .board-member,
+  .staff-member {
+    height: 350px;
+    width: ~"calc(50% - 3rem)";
+    margin: 0 3rem 3rem 0;
+    text-align: center;
+  }
+
+  .board-name,
+  .staff-name {
+    font-size: 1.1rem;
+  }
+
+  .sponsor {
+    width: ~"calc(50% - 3rem)";
+  }
+
+  .archive-item {
+    margin: 0 1.5rem 3rem 0;
+    width: calc(50% - 1.5rem);
+  }
+
+  .post-title {
+    font-size: 2.5rem;
+  }
+
+  .woocommerce {
+    .cart-collaterals .cart_totals {
+      width: 100%;
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  .header,
+  .footer {
+    .inner-wrapper {
+      padding: 1.5rem;
+    }
+  }
+
+  .logoIcon img {
+    height: 75px;
+  }
+
+  .burger {
+    &::before {
+      top: -15px;
+    }
+
+    &::after {
+      top: 15px;
+    }
+  }
+
+  .mainMenu {
+    width: 100%;
+    right: -100%;
+  }
+
+  .main-container {
+    padding: 1.5rem;
+  }
+
+  .front-page {
+    .shop,
+    .support-us {
+      height: 265px;
+
+      .caption {
+        left: 1rem;
+        padding: 0.5rem;
+        width: 60%;
+      }
+
+      .caption-title {
+        font-size: 1.2rem;
+      }
+    }
+
+    .wp1s-caption-wrapper {
+      margin-left: 1rem !important;
+      margin-right: auto !important;
+      padding: 0.5rem;
+      width: 75% !important;
+      max-width: none !important;
+    }
+
+    .wp1s-caption-content {
+      font-size: 1.2rem !important;
+    }
+  }
+
+  .contact-form {
+    margin-bottom: 3rem;
+
+    .form {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .u-input {
+      margin: 0 0 1rem;
+    }
+  }
+
+  .board-member,
+  .staff-member {
+    width: 100%;
+    margin: 0 0 3rem;
+  }
+
+  .sponsor {
+    width: 100%;
+    margin: 0 0 3rem;
+  }
+
+  .archive-item {
+    width: 100%;
+    margin: 0 0 3rem;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .front-page {
+    .shop,
+    .support-us {
+      height: 180px;
+    }
+  }
+
+  .logoIcon img {
+    height: 70px;
+  }
+
+  .footer {
+    .inner-wrapper {
+      margin-top: 1.5rem;
+    }
+  }
+}
